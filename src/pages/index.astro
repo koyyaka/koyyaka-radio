@@ -1,28 +1,77 @@
 ---
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Koyyaka Radio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+<Layout title="Koyyaka Radio">
 
-  <body style="
-    margin:0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#000;
-    color:#fff;
-    font-family:system-ui;
-    text-align:center;
-  ">
-    <div>
-      <h1>🎙️ Koyyaka Radio</h1>
-      <p>Own your Attention.</p>
-      <p>Stop Scrolling. Start Living.</p>
-    </div>
-  </body>
-</html>
+<section>
+
+<div class="container hero">
+
+<p class="eyebrow">
+🎙️ LIVE 24×7
+</p>
+
+<h1>
+Own your<br/>
+Attention.
+</h1>
+
+<p class="subtitle">
+Stop Scrolling.<br/>
+Start Living.
+</p>
+
+<a href="#listen" class="btn">
+Listen Live
+</a>
+
+</div>
+
+</section>
+
+<section id="listen">
+
+<div class="container center">
+
+<h2>Koyyaka Radio</h2>
+
+<p>
+Tamil conversations, music and ideas designed to help people own their attention.
+</p>
+
+</div>
+
+</section>
+
+</Layout>
+
+<style>
+.hero{
+text-align:center;
+}
+
+.eyebrow{
+letter-spacing:4px;
+text-transform:uppercase;
+font-size:14px;
+color:#888;
+margin-bottom:24px;
+}
+
+.subtitle{
+font-size:32px;
+margin-top:30px;
+color:#d0d0d0;
+}
+
+.center{
+text-align:center;
+max-width:800px;
+}
+
+section:first-child{
+background:
+radial-gradient(circle at top,#222,#000 70%);
+}
+</style>

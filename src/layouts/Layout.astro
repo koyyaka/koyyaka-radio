@@ -1,23 +1,84 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title = "Koyyaka Radio" } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",sans-serif;
+      background:#000;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    section{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:80px 24px;
+    }
+
+    .container{
+      width:min(1200px,92%);
+      margin:auto;
+    }
+
+    h1{
+      font-size:clamp(54px,9vw,110px);
+      line-height:1;
+      font-weight:700;
+    }
+
+    h2{
+      font-size:clamp(36px,5vw,72px);
+      margin-bottom:20px;
+    }
+
+    p{
+      color:#bdbdbd;
+      line-height:1.8;
+      font-size:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:40px;
+      padding:18px 36px;
+      border-radius:999px;
+      background:white;
+      color:black;
+      text-decoration:none;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+  </style>
+
+</head>
+
+<body>
+
+<slot />
+
+</body>
+</html>
