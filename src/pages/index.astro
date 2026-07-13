@@ -1,92 +1,177 @@
 ---
-import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Koyyaka Radio">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koyyaka Radio</title>
 
-<section>
+    <style>
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
 
-<div class="container hero">
+      html{
+        scroll-behavior:smooth;
+      }
 
-<p class="eyebrow">
-🎙️ LIVE 24×7
-</p>
+      body{
+        background:#000;
+        color:#fff;
+        font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+      }
 
-<h1>
-Own your<br/>
-Attention.
-</h1>
+      .hero{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:40px 20px;
+        background:radial-gradient(circle at top,#1d1d1d 0%,#000 70%);
+      }
 
-<p class="subtitle">
-Stop Scrolling.<br/>
-Start Living.
-</p>
+      .live{
+        color:#999;
+        letter-spacing:8px;
+        font-size:20px;
+        margin-bottom:50px;
+      }
 
-<a href="#listen" class="btn">
-Listen Live
-</a>
+      h1{
+        font-size:clamp(56px,8vw,96px);
+        line-height:1.05;
+        margin-bottom:40px;
+      }
 
-</div>
+      h2{
+        font-size:clamp(42px,6vw,72px);
+        font-weight:400;
+        color:#d0d0d0;
+        line-height:1.15;
+      }
 
-</section>
+      .button{
+        margin-top:70px;
+        display:inline-block;
+        background:#fff;
+        color:#000;
+        text-decoration:none;
+        padding:22px 60px;
+        border-radius:999px;
+        font-size:30px;
+        font-weight:700;
+        transition:.25s;
+      }
 
-<section id="listen">
+      .button:hover{
+        transform:scale(1.04);
+      }
 
-<div class="container center">
+      .about{
+        padding:120px 20px;
+        text-align:center;
+        max-width:900px;
+        margin:auto;
+      }
 
-<h2>Koyyaka Radio</h2>
+      .about h3{
+        font-size:56px;
+        margin-bottom:30px;
+      }
 
-<p>
-Tamil conversations, music and ideas designed to help people own their attention.
-</p>
+      .about p{
+        color:#ccc;
+        font-size:28px;
+        line-height:1.7;
+      }
 
-</div>
+      footer{
+        padding:60px 20px;
+        text-align:center;
+        color:#666;
+        border-top:1px solid #222;
+      }
 
-</section>
+      @media(max-width:768px){
 
-</Layout>
+        .live{
+          font-size:14px;
+          letter-spacing:5px;
+        }
 
-<style>
-.hero{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
+        h1{
+          font-size:54px;
+        }
 
-.eyebrow{
-    letter-spacing:8px;
-    text-transform:uppercase;
-    font-size:16px;
-    color:#9d9d9d;
-    margin-bottom:30px;
-}
+        h2{
+          font-size:34px;
+        }
 
-.subtitle{
-    margin-top:40px;
-    font-size:clamp(26px,4vw,46px);
-    color:#bfbfbf;
-    line-height:1.3;
-}
+        .button{
+          font-size:22px;
+          padding:18px 42px;
+        }
 
-.center{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
+        .about h3{
+          font-size:40px;
+        }
 
-.btn{
-    display:inline-block;
-    margin-top:60px;
-    padding:18px 40px;
-    background:#fff;
-    color:#000;
-    text-decoration:none;
-    border-radius:999px;
-    font-weight:700;
-    font-size:20px;
-}
+        .about p{
+          font-size:22px;
+        }
 
-section:first-child{
-    background:radial-gradient(circle at top,#222,#000 70%);
-}
-</style>
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <section class="hero">
+
+      <div class="live">
+        🎙 LIVE 24×7
+      </div>
+
+      <h1>
+        Own your<br />
+        Attention.
+      </h1>
+
+      <h2>
+        Stop Scrolling.<br />
+        Start Living.
+      </h2>
+
+      <a
+        class="button"
+        href="https://koyyaka.com/listen"
+      >
+        Listen Live
+      </a>
+
+    </section>
+
+    <section class="about">
+
+      <h3>Koyyaka Radio</h3>
+
+      <p>
+        Tamil conversations, music and ideas designed to help
+        people own their attention.
+      </p>
+
+    </section>
+
+    <footer>
+      © 2026 Koyyaka Radio
+    </footer>
+
+  </body>
+</html>
